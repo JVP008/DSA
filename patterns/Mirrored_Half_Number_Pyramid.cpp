@@ -4,7 +4,7 @@ using namespace std;
 /*
 Pattern:
 1      1  logic for spaces : 2*(4-i)
-12    21 2*(4-i)
+12    21
 123  321
 12344321
 */
