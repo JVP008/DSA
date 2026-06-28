@@ -25,7 +25,7 @@ int main()
         i=1;
         count++;
 
-    if (count!=5)
+    if (count!=n)
     {
     goto label;
     }
