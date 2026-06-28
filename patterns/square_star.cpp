@@ -14,7 +14,7 @@ int main()
             i++;
         }while(i<=n);
         cout<<endl;
-    j++;
+    j++;        
     if (j!=n){
     goto label;
     }
