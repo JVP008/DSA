@@ -1,6 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+/* pattern :
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * */
+
 int main()
 {
     int n;

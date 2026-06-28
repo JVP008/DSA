@@ -2,6 +2,13 @@
 using namespace std;
 int main()
 {
+
+    //Majuscule:
+    // A B C 
+    // A B C 
+    // A B C 
+
+
     int n;
     cin>>n;
     cout<<"Majuscule\n";
@@ -13,6 +20,10 @@ int main()
     }
 
     cout<<endl;
+    // Minuscule:
+    // a b c 
+    // a b c 
+    // a b c
     cout<<"Minuscule\n";
     for (int i=0;i<n;i++){
         for (int i=0;i<n;i++){
