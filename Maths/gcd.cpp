@@ -6,7 +6,8 @@ int main(){
     cout<<"Enter N & M: ";
     cin>>n>>m; 
     int gcd= 0;
-    for(int i = min(n,m);i>0;i--){
+    int minn = min(n,m);
+    for(int i = minn;i>0;i--){
         if (n%i==0 && m%i==0){
             gcd = i;
             break;
