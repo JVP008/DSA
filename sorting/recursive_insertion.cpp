@@ -3,7 +3,7 @@ using namespace std;
 void insertion_sort(int arr[],int n,int i){
     //base condition
     if (i==n){
-        return ;
+        return;
     }
     int j = i;
     while (j>0 && arr[j]<arr[j-1]){
@@ -12,9 +12,7 @@ void insertion_sort(int arr[],int n,int i){
         arr[j-1] = temp;
         j-=1;
     }
-    i+=1;
     insertion_sort(arr,n,i+1);
-
 }
 
 int main(){
