@@ -2,7 +2,7 @@
 using namespace std;
 void insertion_sort(int arr[],int n,int i){
     //base condition
-    if (i==n){
+    if (i==n){ //if you provided n-1 then this will get called early!!
         return;
     }
     int j = i;
