@@ -9,10 +9,10 @@ void subseq (int i,vector<int>&v,int arr[],int n){
         cout<<"\n";
         return ;
     }
-    //if yes
+    //if picked
     subseq(i+1,v,arr,n);
     v.push_back(arr[i]);
-    // if no
+    // if not picked 
     subseq(i+1,v,arr,n);
     v.pop_back();
 }
