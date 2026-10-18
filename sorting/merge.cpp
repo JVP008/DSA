@@ -30,7 +30,7 @@ void merge(int s,int mid,int e,vector<int> &arr){
         temp.push_back(arr[right]);
         right+=1;
     }
-
+    //i++ ; s stays the same!
     for (int i = s;i<=e;i++){
         arr[i] = temp[i-s];
     }
