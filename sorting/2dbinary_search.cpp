@@ -1,45 +1,48 @@
-
-//works only for 3x3 matrix or Square Matrix
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
-void binary_search(int arr[][3],int size,int key){
-    int mid = size/2;
-    for (int i = 0; i<size;i++){
-        if (arr[mid][0]<=key && arr[mid][size] >= key){
-            int m = 0;
-            int l = 0;
-            int h = 2;
-            while (l<=h){
-                m = (l+h)/2;
-                if (arr[mid][m]==key){
-                    cout<<"Found\n";
-                    return;
-                }
-                else if (arr[mid][m] > key){
-                    h = m - 1;
-                }
-                else{
-                    l = m + 1;
+
+bool binary_search(const int arr[][3], int rows, int key) {
+    int low = 0;
+    int high = rows - 1;
+
+    while (low <= high) {
+        int row = low + (high - low) / 2;
+
+        if (key < arr[row][0]) {
+            high = row - 1;
+        } else if (key > arr[row][2]) {
+            low = row + 1;
+        } else {
+            int left = 0;
+            int right = 2;
+
+            while (left <= right) {
+                int middle = left + (right - left) / 2;
+
+                if (arr[row][middle] == key) {
+                    return true;
+                } else if (arr[row][middle] < key) {
+                    left = middle + 1;
+                } else {
+                    right = middle - 1;
                 }
             }
-        }
-        else if (arr[mid][0]<key && arr[mid][size] < key){
-            mid -=1;
-        }
-        else{
-            mid+=1;
+
+            return false;
         }
     }
-    cout<<"Not Found\n";
 
+    return false;
 }
-int main (){
-    int arr[3][3] = {
-        {1,2,3},
-        {4,5,6}, //middle 
-        {7,8,9},
+
+int main() {
+    const int arr[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
     };
+
     int key = 3;
-    binary_search(arr,2,key);
+    cout << (binary_search(arr, 3, key) ? "Found\n" : "Not Found\n");
     return 0;
 }
